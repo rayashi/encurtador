@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>{% block titulo %}{% endblock %}</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    {% load static %}
+
+    <link href="{% static "css/plugins/bootstrap/bootstrap.min.css" %}" rel="stylesheet" type="text/css" />
+    <link href="{% static "css/plugins/bootstrap/bootstrap-theme.min.css" %}" rel="stylesheet" type="text/css" />
+    {% block css %}{% endblock %}
+
+    <script type="text/javascript" src="{% static "js/plugins/jquery-1.11.0.min.js" %}"></script>
+    <script type="text/javascript" src="{% static "js/plugins/bootstrap.min.js" %}"></script>
+    {% block js %}{% endblock %}
+
+</head>
+
+<body>
+    {% block conteudo %}{% endblock %}
+</body>
+
+</html>
